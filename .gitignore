@@ -62,3 +62,6 @@ typings/
 
 # credentials 
 credentials/*.json
+
+#resultado da pesquisa
+content.json
