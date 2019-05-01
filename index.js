@@ -1,30 +1,11 @@
-const readLine = require('readline-sync')
 const robots = {
+    input: require('./robots/input.js'),
     text: require('./robots/text.js')
 }
 
-async function start(){
-    const content = {
-        maximumSentences: 7
-    }
-
-    content.searchTerm = askAndReturnSearchTerm()
-    content.prefix = askAndReturnPrefix()
-
-    await robots.text(content)
-
-    function askAndReturnSearchTerm() {
-        return readLine.question('Type a Wikepedia search term: ')
-    }
-
-    function askAndReturnPrefix(){
-        const prefixes = ['Who is', 'What is', 'The history of']
-        const selectedPrefixIndex = readLine.keyInSelect(prefixes, 'Choose one option')
-        const selectedPrefixedText = prefixes[selectedPrefixIndex]
-        return(selectedPrefixedText)
-    }
-
-    console.log(JSON.stringify(content,null, 4))
+async function start() {
+    robots.input()
+    await robots.text()
 }
 
 start()
