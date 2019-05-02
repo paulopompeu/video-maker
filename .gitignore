@@ -68,3 +68,4 @@ content.json
 
 # Folder for downloaded or generated content
 content/*.png
+content/*.jpg
