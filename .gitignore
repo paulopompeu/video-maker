@@ -65,3 +65,6 @@ credentials/*.json
 
 #resultado da pesquisa
 content.json
+
+# Folder for downloaded or generated content
+content/*.png
