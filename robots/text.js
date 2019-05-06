@@ -93,7 +93,7 @@ async function robot(){
           }, (error, response) => {
             if (error) {
               reject(error)
-              return
+              return 
             }
     
             const keywords = response.keywords.map((keyword) => {
@@ -104,6 +104,6 @@ async function robot(){
           })
         })
     }
-}
+};
 
 module.exports = robot
